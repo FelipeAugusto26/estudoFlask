@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
+    <title>System - Login</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form action="{{ url_for('index') }}">
                         <h2>Acesso ao Sistema</h2>
                         <br/>
                         <div class="form-group">
@@ -54,9 +54,7 @@
                             <label>
                                 <input type="checkbox"> Lembre-me
                             </label>
-                             <button type="button" class="btn btn-sm social facebook" style="margin-bottom: 4px">
-                                    <i class="fa fa-facebook"></i>
-                                </button>x
+
 
                         </div>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Entrar</button>
