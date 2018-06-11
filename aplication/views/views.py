@@ -9,15 +9,27 @@ def login():
 
 @app.route('/')
 def index():
-    return render_template('login.html')
+    return render_template('index.html')
+
+##################
+# SETOR CLIENTES ################################
+##################
 
 @app.route('/cad-client')
 def cad_cliente():
     return render_template('cad_cliente.html')
 
+@app.route('/edit_cliente')
+def edit_cliente():
+    return render_template('edit_cliente.html')
+
 @app.route('/list_cliente')
 def list_cliente():
     return render_template('list_cliente.html')
+
+########################
+# SETOR CLIENTES - FIM ##########################
+########################
 
 @app.route('/new_orca')
 def new_orca():

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <meta charset="utf-8">
+    <title>SISTEMA</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="favicon_16.ico"/>
+    <link rel="bookmark" href="favicon_16.ico"/>
+    <!-- Stilo do bootstrap
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    -->
+    <!-- site css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/site.min.css') }}">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="{{ url_for('static', filename='bootflat-admin/js/html5shiv.js') }}"></script>
+      <script src="{{ url_for('static', filename='bootflat-admin/js/respond.min.js') }}"></script>
+    <![endif]-->
+    <script type="text/javascript" src="{{ url_for('static', filename='dist/js/site.min.js') }}"></script>
+    {% endblock %}
+  </head>
+  <body>
+    <!--nav-->
+    <nav role="navigation" class="navbar navbar-custom">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button data-target="#bs-content-row-navbar-collapse-5" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">SISTEMA DE GERENCIAMENTO</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div id="bs-content-row-navbar-collapse-5" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="getting-started.html">Getting Started</a></li>
+              <li class="active"><a href="index.html">Documentation</a></li>
+              <!-- <li class="disabled"><a href="#">Link</a></li> -->
+              <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Silverbux <b class="caret"></b></a>
+                <ul role="menu" class="dropdown-menu">
+                  <li class="dropdown-header">Setting</li>
+                  <li><a href="#">Action</a></li>
+                  <li class="divider"></li>
+                  <li class="active"><a href="#">Separated link</a></li>
+                  <li class="divider"></li>
+                  <li class="disabled"><a href="#">Signout</a></li>
+                </ul>
+              </li>
+            </ul>
+
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+    <!--header-->
+    <div class="container-fluid">
+    <!--documents-->
+        <div class="row row-offcanvas row-offcanvas-left">
+          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+            <ul class="list-group panel">
+                <li class="list-group-item"><i class="glyphicon glyphicon-align-justify"></i> <b>PAINEL PRINCIPAL</b></li>
+                <li class="list-group-item"><input type="text" class="form-control search-query" placeholder="Search Something"></li>
+                <li class="list-group-item"><a href="{{ url_for('index') }}"><i class="glyphicon glyphicon-home"></i>HOME </a></li>
+                <li>
+                  <a href="#cliente" class="list-group-item " data-toggle="collapse"><i class="glyphicon glyphicon-user"></i>CLIENTE  <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <li class="collapse" id="cliente">
+                      <a href="{{ url_for('cad_cliente') }}" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Novo Cliente</a>
+                      <a href="{{ url_for('list_cliente') }}" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Listar Clientes</a>
+                      <a href="{{ url_for('edit_cliente') }}" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Editar Clientes</a>
+                    </li>
+                </li>
+                <li>
+                  <a href="#orcamento" class="list-group-item " data-toggle="collapse"><i class="glyphicon glyphicon-list-alt"></i>ORÇAMENTOS  <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <li class="collapse" id="orcamento">
+                      <a href="" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Novo Orçamento</a>
+                      <a href="" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Listar Orçamento</a>
+                      <a href="" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Editar Orçamento</a>
+                    </li>
+                </li>
+                <li>
+                  <a href="#conf" class="list-group-item " data-toggle="collapse"><i class=" glyphicon glyphicon-cog"></i>CONFIGURAÇÕES  <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <li class="collapse" id="conf">
+                      <a href="" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Empresa</a>
+                      <a href="" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Usuário</a>
+                      <a href="" class="list-group-item"><i class="glyphicon glyphicon-minus"></i> Lembretes</a>
+                    </li>
+                </li>
+
+              </ul>
+          </div>
+          <div class="col-xs-12 col-sm-9 content">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><a href="javascript:void(0);" class="toggle-sidebar"><span class="fa fa-angle-double-left" data-toggle="offcanvas" title="Maximize Panel"></span></a>{% block painel %}{% endblock %}</h3>
+              </div>
+              <div class="panel-body">
+                <div class="content-row">
+                  {% block container %}
+                  {% endblock %}
+
+                </div>
+              </div><!-- panel body -->
+            </div>
+        </div><!-- content -->
+      </div>
+    </div>
+    <!-- style boostrap-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  </body>
+</html>
