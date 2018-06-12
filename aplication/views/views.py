@@ -1,5 +1,6 @@
 from flask import Flask, abort, render_template
 from aplication import app
+from aplication.models import userform
 
 
 # Pagina inicial do site
