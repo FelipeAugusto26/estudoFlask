@@ -46,14 +46,14 @@
               <li class="active"><a href="index.html">Documentation</a></li>
               <!-- <li class="disabled"><a href="#">Link</a></li> -->
               <li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Silverbux <b class="caret"></b></a>
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Usuario <b class="caret"></b></a>
                 <ul role="menu" class="dropdown-menu">
                   <li class="dropdown-header">Setting</li>
                   <li><a href="#">Action</a></li>
                   <li class="divider"></li>
                   <li class="active"><a href="#">Separated link</a></li>
                   <li class="divider"></li>
-                  <li class="disabled"><a href="#">Signout</a></li>
+                  <li class="disabled"><a href="{{ url_for('logout') }}">Logout</a></li>
                 </ul>
               </li>
             </ul>

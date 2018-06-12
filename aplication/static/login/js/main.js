@@ -1,10 +1,10 @@
-
+/*==================================================================
 (function ($) {
     "use strict";
 
 
-    /*==================================================================
-    [ Focus input ]*/
+
+    [ Focus input ]
     $('.input100').each(function(){
         $(this).on('blur', function(){
             if($(this).val().trim() != "") {
@@ -18,7 +18,7 @@
   
   
     /*==================================================================
-    [ Validate ]*/
+    [ Validate ]
     var input = $('.validate-input .input100');
 
     $('.validate-form').on('submit',function(){
@@ -29,7 +29,7 @@
                 showValidate(input[i]);
                 check=false;
             }
-        }
+        }#
 
         return check;
     });
@@ -67,7 +67,7 @@
     }
     
     /*==================================================================
-    [ Show pass ]*/
+    [ Show pass ]
     var showPass = 0;
     $('.btn-show-pass').on('click', function(){
         if(showPass == 0) {
@@ -85,3 +85,5 @@
 
 
 })(jQuery);
+
+*/

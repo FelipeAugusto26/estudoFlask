@@ -6,3 +6,7 @@ from wtforms.validators import DataRequired
 class LoginForm(FlaskForm):
     email = StringField('email', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
+
+
+class CadCliente(FlaskForm):
+    pass

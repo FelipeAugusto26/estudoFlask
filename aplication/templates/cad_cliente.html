@@ -3,7 +3,36 @@
 {% block title %}Cadastro Clientes{% endblock %}
 {% block painel %}Novo Cliente{% endblock %}
 {% block container %}
+<form action="{{ url_for('cad_cliente') }}" method="POST">
 
+  <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="nome">Nome/Empresa</label>
+        <input type="name" class="form-control" id="nome" placeholder="Fisico ou Juridico">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="telefone">Telefone</label>
+        <input type="phone" class="form-control" id="telefone" placeholder="Telefone">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-12 col-md-4">
+        <label for="nome">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="email@empresa.com.br">
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-12 col-md-4">
+          <label for="endereco">Endereço</label>
+          <textarea class="form-control" id="endereco" rows="3" placeholder="Rua das Dores, 100 - Carapicuiba SP"></textarea>
+      </div>
+  </div>
+    <button type="submit" class="btn btn-primary">Salvar Cliente</button>
+</form>
 
 
 {% endblock %}
